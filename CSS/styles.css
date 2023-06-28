@@ -905,10 +905,10 @@ a {
   top: 0;
   left: 50%;
   transition: 0.5s linear;
-  -webkit-transition: 0.5s linear;
-  -moz-transition: 0.5s linear;
-  -ms-transition: 0.5s linear;
-  -o-transition: 0.5s linear;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -ms-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
 }
 .services .container .box:hover::after {
   width: 100%;
@@ -922,10 +922,10 @@ a {
   top: 0;
   right: 50%;
   transition: 0.5s linear;
-  -webkit-transition: 0.5s linear;
-  -moz-transition: 0.5s linear;
-  -ms-transition: 0.5s linear;
-  -o-transition: 0.5s linear;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -ms-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
 }
 .services .container .box:hover::before {
   width: 100%;
@@ -971,4 +971,175 @@ a {
 }
 .services .box .info a {
   color: var(--main-color);
+}
+.skills .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .skills .container .image {
+    display: none;
+  }
+  .skills .container .box {
+    flex: 1;
+  }
+}
+.skills .container .image,
+.skills .container .box {
+  flex-basis: 48%;
+}
+.skills .container .image img {
+  width: 100%;
+}
+.skills .container .box {
+  display: flex;
+  flex-direction: column;
+}
+.skills .container .box .content {
+  margin-bottom: 20px;
+}
+.skills .container .box .content .bar {
+  height: 30px;
+  background-color: #eee;
+  margin-top: 15px;
+  position: relative;
+}
+.skills .container .box .content .bar::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.skills .container .box .content .bar-1::after {
+  width: 80%;
+}
+.skills .container .box .content .bar-2::after {
+  width: 85%;
+}
+.skills .container .box .content .bar-3::after {
+  width: 70%;
+}
+.skills .container .box .content .bar-4::after {
+  width: 90%;
+}
+.skills .container .box .content .bar::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 21px;
+  right: 0;
+  top: -30px;
+  border: 1px solid rgba(0, 0, 0, 0.234);
+  color: var(--main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-align: center;
+}
+.skills .container .box .content .bar-1::before {
+  content: "80%";
+}
+.skills .container .box .content .bar-2::before {
+  content: "85%";
+}
+.skills .container .box .content .bar-3::before {
+  content: "70%";
+}
+.skills .container .box .content .bar-4::before {
+  content: "90%";
+}
+.work-steps {
+  background-color: var(--section-background);
+  padding: 40px 0;
+}
+.work-steps .shared-button {
+  z-index: 1;
+  width: fit-content;
+  padding: 0 10px;
+}
+.work-steps .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .work-steps .container .box,
+  .work-steps .container .image {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 991px) {
+  .work-steps .container .box,
+  .work-steps .container .image {
+    flex-basis: 48%;
+  }
+}
+
+.work-steps .container .image img {
+  width: 100%;
+}
+.work-steps .container .box .content .image {
+  flex-basis: 13%;
+  align-self: center;
+}
+.work-steps .container .box .content .text {
+  flex-basis: 83%;
+}
+.work-steps .container .box .content .image img {
+  width: 100%;
+}
+.work-steps .container .box .content {
+  background-color: #f6f5f5;
+  margin-bottom: 20px;
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  position: relative;
+  z-index: 1;
+}
+.work-steps .container .box .content::after {
+  content: "";
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  background-color: hsla(0, 0%, 93%, 0.5);
+  z-index: -1;
+  left: 45%;
+  top: 45%;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  visibility: hidden;
+}
+.work-steps .container .box .content:hover::after {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+.work-steps .container .box .content .text h3 {
+  margin: 0;
+  font-size: 22px;
+}
+.work-steps .container .box .content .text p {
+  color: #777;
+  line-height: 1.7;
+  margin: 10px 0 0;
+  font-size: 18px;
 }
