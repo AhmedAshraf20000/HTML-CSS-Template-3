@@ -1143,3 +1143,193 @@ a {
   margin: 10px 0 0;
   font-size: 18px;
 }
+.events {
+  position: relative;
+  padding-bottom: 80px;
+}
+.events .shared-button {
+  z-index: 1;
+  width: fit-content;
+  padding: 0 10px;
+}
+.events .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .events .container .image {
+    display: none;
+  }
+  .events .container .box {
+    flex: 1;
+  }
+  .dots {
+    display: none;
+  }
+}
+@media (min-width: 991px) {
+  .events .container .box {
+    flex-basis: 58%;
+  }
+  .events .container .image {
+    flex-basis: 38%;
+  }
+}
+.events .container .image img {
+  width: 100%;
+}
+.events .container .box .text {
+  text-align: center;
+}
+.events .container .box .text h2 {
+  text-align: center;
+  margin: 40px 0 0;
+  font-size: 30px;
+}
+.events .container .box .text p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 19px;
+  color: #777;
+}
+.date {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.date li {
+  border: 1px solid #d4d4d4;
+  margin-left: 10px;
+  width: 75px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+}
+.date li:first-child::after {
+  content: "Days";
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: calc(-20% - 15px);
+  border: 1px solid #d4d4d4;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  padding: 7px 0;
+}
+.date li:nth-child(2)::after {
+  content: "Hours";
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: calc(-20% - 15px);
+  border: 1px solid #d4d4d4;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  padding: 7px 0;
+}
+.date li:nth-child(3)::after {
+  content: "Minutes";
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: calc(-20% - 15px);
+  border: 1px solid #d4d4d4;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  padding: 7px 0;
+}
+.date li:last-child::after {
+  content: "Seconds";
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: calc(-20% - 15px);
+  border: 1px solid #d4d4d4;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  padding: 7px 0;
+}
+.events .dots-1 {
+  position: absolute;
+  right: 0;
+  bottom: 70%;
+}
+.events .dots-2 {
+  position: absolute;
+  bottom: 12%;
+}
+@media (max-width: 991px) {
+  .mail-box {
+    width: 100%;
+    margin: 0;
+    visibility: hidden;
+  }
+}
+.mail-box {
+  background-color: var(--section-background);
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.mail-box input {
+  display: block;
+  flex-basis: 70%;
+  height: 58px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border: none;
+  padding-left: 20px;
+}
+.mail-box input:focus {
+  caret-color: var(--main-color);
+  border: none;
+}
+.mail-box input:focus::placeholder {
+  color: transparent;
+}
+.mail-box button {
+  flex-basis: 25%;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+}
+.mail-box button:hover {
+  background-color: var(--main-color-alt);
+}
