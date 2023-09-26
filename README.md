@@ -1,6 +1,6 @@
 # Project Title
 
-Leon Template
+Personal studio Template
 
 ## Getting Started
 
